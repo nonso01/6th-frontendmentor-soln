@@ -1,0 +1,118 @@
+@import url("/src/styles/util.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+  color: var(--v-d-v);
+  font-family: var(--ftf);
+}
+
+html {
+  width: var(--mx-w);
+  min-height: 113.215rem;
+  font-family: sans-serif;
+  font-size: var(--fts);
+  background: var(--wt) url("/images/bg-main-desktop.png") no-repeat border-box top left/35% 100%;
+}
+html body {
+  min-height: inherit;
+}
+
+.card {
+  flex: 0.6 1 auto;
+}
+.card__cards {
+  width: 40%;
+  overflow: visible;
+}
+.card__cards div:not(.card__img, .card__details) {
+  height: 30%;
+  border-radius: var(--fts);
+  box-shadow: 0 var(--fts) calc(var(--rad) * 3) calc(var(--fts) * 2) rgba(0, 0, 0, 0.08);
+}
+.card__img {
+  flex: 0.1 1 auto;
+}
+.card__img img {
+  width: 8.208rem;
+  height: 4.434rem;
+}
+.card__details {
+  flex: 0.4 1 auto;
+}
+.card__details p {
+  justify-content: space-between;
+  transform: translateY(90%);
+}
+.card__front {
+  background: var(--wt) url("/images/bg-card-front.png") no-repeat border-box var(--cn)/cover;
+  justify-content: space-evenly;
+  padding: 0 8%;
+}
+.card__back {
+  position: relative;
+  background: var(--wt) url("/images/bg-card-back.png") no-repeat border-box var(--cn)/cover;
+  transform: translate(20%, -30%);
+}
+.card__back span {
+  position: absolute;
+  top: 47%;
+  left: 80%;
+}
+.card__form {
+  width: 30%;
+}
+.card__form form {
+  flex: 0.2 1 auto;
+}
+.card__form form label:not(div > label) {
+  flex: 0.18 1 auto;
+}
+.card__form form label:not(div > label) input {
+  height: 48%;
+}
+.card__form form div:not(.pack) {
+  flex: 0.2 1 auto;
+  justify-content: space-between;
+}
+.card__form form div:not(.pack) .pack {
+  height: 50%;
+  justify-content: space-between;
+}
+.card__form form div:not(.pack) .pack input {
+  width: 45%;
+}
+.card__form form div:not(.pack) label {
+  height: 80%;
+  width: 50%;
+}
+.card__form form div:not(.pack) label:last-child {
+  width: 45%;
+}
+.card__form form div:not(.pack) label:last-child input {
+  height: 50%;
+}
+.card__form form .btn {
+  flex: 0.13 1 auto;
+}
+.card__complete {
+  flex: 0.3 1 auto;
+}
+.card__complete div {
+  flex: 0.3 1 auto;
+  width: max-content;
+  align-self: var(--cn);
+}
+.card__complete div img {
+  align-self: var(--cn);
+}
+.card__complete div span {
+  color: var(--d-g-v);
+}
+.card__complete .btn {
+  flex: 0.1 1 auto;
+}
+
+/*# sourceMappingURL=main.css.map */

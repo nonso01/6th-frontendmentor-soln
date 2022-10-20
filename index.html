@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+<link rel="stylesheet" href="/src/styles/main.css">
+</head>
+
+<body class="fx fx-col">
+
+<div class="card fx fx-row">
+ <div class="card__cards fx fx-col">
+  
+ <div class="card__front fx fx-col">
+  <div class="card__img">
+   <img src="/images/card-logo.svg" alt="card logo">
+  </div>
+  
+  <div class="card__details fx fx-col">
+  <h1 class="card__num__tl">0000 0000 0000 0000</h1>
+  
+  <p class="fx fx-row">
+   <span class="card__name">Jane Appleseed</span>
+  
+  <span class="card__expire">00/00</span></p>
+  </div>
+ </div>
+ 
+  <div class="card__back">
+   <span class="card__cvc">000</span>
+   </div>
+ </div>
+ 
+ <div class="card__form fx fx-col">
+  <form class="fx fx-col">
+   
+   <label class="fx fx-col">
+  <h2>Cardholder Name</h2>
+  <input type="text" placeholder="e.g. Jane Appleseed" class="card__name__in">
+  
+  <h3> can't</h3>
+   </label>
+   
+   <label class="fx fx-col">
+  <h2> Card Number</h2>
+ <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="card__num__in">
+ <h3>can't</h3>
+   </label>
+   
+   <div class="fx fx-row">
+    <label class="fx fx-col">
+  <h2>Exp. Date (MM/YY)</h2>
+   <div class="pack fx fx-row">
+ <input type="number" placeholder="MM" class="card__date__in">
+ <input type="number" placeholder="YY"  class="card__date__in">
+   </div>
+   <h3>can't</h3>
+    </label>
+    
+    <label class="fx fx-col">
+  <h2>CVC</h2>
+ <input type="number" placeholder="e.g. 123" class="card__expire__in" >
+ <h3>can't</h3>
+    </label>
+    
+   </div>
+  <button type="submit" class="btn trans">Confirm</button>
+  </form>
+
+  <!-- Completed state start -->
+
+<div class="card__complete fx fx-col hide">
+ 
+ <div class="fx fx-col">
+  <img src="/images/icon-complete.svg" alt="icon complete" width="80px" height="80px">
+   <h4 class="tx-cn">Thank you!</h4>
+  <span>We've added your card details<span>
+ </div>
+ 
+  <button class="btn trans">Continue</button>
+</div>
+
+</div>
+
+
+</div>
+  
+  
+  <div class="attr hide">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  
+  
+  <script src="/src/scripts/main.js"></script>
+    <script src="/src/scripts/resize.js"></script>
+</body>
+</html>

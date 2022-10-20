@@ -1,0 +1,121 @@
+@import url("/src/styles/util.css");
+
+$im: !important;
+// @import fonts
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ outline: none;
+ //border: var(--bd);
+ scroll-behavior: smooth;
+ color: var(--v-d-v);
+}
+
+html{
+ width: var(--mx-w);
+ min-height: 113.215rem;
+ font-family: sans-serif;
+ font-size: var(--fts);
+ background: var(--wt) url("/images/bg-main-desktop.png") no-repeat border-box top left/35% 100%;
+ body{
+  min-height: inherit;
+ }
+}
+
+
+.card{
+ flex: 0.6 1 auto;
+&__cards{
+ width: 40%;
+ overflow: visible;
+ div:not(.card__img,.card__details){
+  height: 30%;
+  border-radius: var(--fts);
+  box-shadow: 0 var(--fts) calc(var(--rad)*3) calc(var(--fts)*2) rgba(0,0,0,0.08);
+ }
+}
+&__img{
+ flex: 0.1 1 auto;
+ img{
+  width: 8.208rem;
+  height: 4.434rem;
+ }
+}
+&__details{
+ flex: 0.4 1 auto;
+ p{
+  justify-content: space-between;
+  transform: translateY(90%); //todo
+ }
+}
+&__front{
+ background: var(--wt) url("/images/bg-card-front.png") no-repeat border-box var(--cn)/cover;
+ justify-content: space-evenly;
+ padding: 0 8%;
+}
+&__back{
+ position: relative;
+  background: var(--wt) url("/images/bg-card-back.png") no-repeat border-box var(--cn)/cover;
+  transform:  translate(20%,-30%);
+
+span{
+ position: absolute;
+ top: 47%;
+ left: 80%;
+}
+}
+&__form{
+ width: 30%;
+ form{
+    flex: 0.2 1 auto;
+    label:not(div > label){
+     flex: 0.18 1 auto;
+     input{
+      height: 48%;
+     }
+    }
+    div:not(.pack){
+     flex: 0.2 1 auto;
+     justify-content: space-between;
+     .pack{
+      height: 50%;
+      justify-content: space-between;
+      input{
+       width: 45%;
+      }
+     }
+     label{
+      height: 80%;
+      width: 50%;
+      &:last-child{ 
+       width: 45%;
+       input{
+        height: 50%;
+      }
+      }
+     }
+    }
+   .btn{
+    flex: 0.13 1 auto;
+   }
+ }
+}
+&__complete{
+ flex: 0.3 1 auto;
+ div{
+  flex: 0.3 1 auto;
+  width: max-content;
+  align-self: var(--cn);
+ img{
+    align-self: var(--cn);
+ }
+ span{
+  color: var(--d-g-v);
+ }
+ }
+ .btn{
+  flex: 0.1 1 auto;
+ }
+}
+}
