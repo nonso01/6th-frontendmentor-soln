@@ -12,7 +12,6 @@
 html {
   width: var(--mx-w);
   min-height: 113.215rem;
-  font-family: sans-serif;
   font-size: var(--fts);
   background: var(--wt) url("/images/bg-main-desktop.png") no-repeat border-box top left/35% 100%;
 }
@@ -74,7 +73,7 @@ html body {
   height: 48%;
 }
 .card__form form div:not(.pack) {
-  flex: 0.2 1 auto;
+  flex: 0.299 1 auto;
   justify-content: space-between;
 }
 .card__form form div:not(.pack) .pack {
