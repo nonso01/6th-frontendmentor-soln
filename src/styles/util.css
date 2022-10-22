@@ -135,3 +135,11 @@ span {
 }
 
 /*# sourceMappingURL=util.css.map */
+
+
+.layer{
+ border: 2px solid;
+ border-radius: var(--rad);
+ background-color: rgba(200,200,200,0.2);
+ transition: var(--trans);
+}

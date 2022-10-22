@@ -57,12 +57,13 @@ const Errors= [
  "input field can't be empty",
  ]
 
+/* under development*/
 
 function writeOnCard(){
  
  const allInput= dqA("input").forEach((e,i)=>{
   
-  event(e,"input",()=>{
+  event(e,"input",()=>{ // any changes
    switch(i){
     case 0:
      Card.name.textContent= e.value
@@ -79,7 +80,7 @@ function writeOnCard(){
     }
     
     
-    if(e.value.length===0) Card.num.innerText="00## #### #### ##00"
+    if(e.value.length===0) Card.num.innerText="00** **** **** **00"
     
     break
     
@@ -111,6 +112,38 @@ function writeOnCard(){
      e.classList.contains("l-opacity")?0:timeOut(()=>{e.classList.add("l-opacity")},1500)
     })
 
+  })
+  // end input event
+  
+  
+  event(e,"focus",()=>{  //focus
+   switch(i){
+    case 0:
+    Card.name.classList.add("layer")
+     break
+   case 1:
+   Card.num.classList.add("layer")
+   break
+   
+   case 2:
+    break
+   
+  case 3:
+     break;
+   case 4:
+      break
+   default:
+   csl("error")
+   break;
+   }
+   e.preventDefault()
+  })
+  
+  event(e,"blur",()=>{ // out of focus
+   for(let prop in Card){
+    Card[prop].classList.remove("layer")
+    csl(prop)
+   }
   })
  })
  
