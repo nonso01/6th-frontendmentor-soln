@@ -5,6 +5,8 @@ const dc=x=> document.createElement(x)
 const dq=x=> document.querySelector(x)
 const dqA=x=>document.querySelectorAll(x)
 
+const html= dq("html")
+const body= dq("body")
 
 function interval(f,time){
 const interval= setInterval(f,time)
@@ -136,13 +138,13 @@ function writeOnCard(){
    csl("error")
    break;
    }
-   e.preventDefault()
+  
   })
   
   event(e,"blur",()=>{ // out of focus
    for(let prop in Card){
     Card[prop].classList.remove("layer")
-    csl(prop)
+    csl("out of focus")
    }
   })
  })

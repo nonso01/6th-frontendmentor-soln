@@ -80,7 +80,6 @@ $im: !important;
  animation:{
   name: shake;
   duration: .3s;
-  //delay: .1s;
   iteration-count: 3;
   timing-function: var(--bezier);
  }
@@ -96,6 +95,12 @@ $im: !important;
 
 .l-opacity{
  opacity: 0;
+}
+
+.layer{
+ border-radius: calc(var(--rad)/2);
+ background-color: hsla(0,0%,100%,0.2);
+// transition: var(--trans);
 }
 
 input{
@@ -125,13 +130,12 @@ span{
  font-size: 1.1rem;
 }
 
-@media (max-width: 550px){
+
+@media (max-width: 1000px){
  html{
-  width: var(--st-w) $im;
-  min-height: var(--st-h) $im;
+  width: var(--st-w) !important;
  }
 }
-
 
 //animations
 @keyframes shake{

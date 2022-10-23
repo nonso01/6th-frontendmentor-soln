@@ -57,7 +57,7 @@ html body {
 }
 .card__back span {
   position: absolute;
-  top: 47%;
+  top: 45%;
   left: 80%;
 }
 .card__form {
@@ -106,12 +106,104 @@ html body {
 }
 .card__complete div img {
   align-self: var(--cn);
+  width: 5.03rem;
+  height: 5.03rem;
 }
 .card__complete div span {
   color: var(--d-g-v);
 }
 .card__complete .btn {
   flex: 0.1 1 auto;
+}
+
+#tb, #mb {
+  min-height: var(--st-h);
+  background-position: top left;
+  background-size: var(--st-w) calc(var(--st-w) / 3.2);
+}
+#tb body, #mb body {
+  justify-content: flex-start;
+}
+
+#mb .card {
+  flex-flow: column;
+  min-height: var(--st-h);
+}
+#mb .card__cards {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+#mb .card__front, #mb .card__back {
+  position: absolute;
+  width: 90%;
+  height: 190px;
+  border-radius: var(--rad);
+}
+#mb .card__front span, #mb .card__back span {
+  font-size: 0.7rem;
+}
+#mb .card__front {
+  transform: translate(2%, 20%);
+  z-index: 2;
+}
+#mb .card__front h1 {
+  font-size: 1.3rem;
+}
+#mb .card__front img {
+  width: 4.104rem;
+  height: 2.217rem;
+}
+#mb .card__back {
+  transform: translate(10%, -40%);
+}
+#mb .card__form {
+  width: 90%;
+  height: 28.304rem;
+  place-self: var(--cn);
+}
+#mb .card__form form {
+  height: 100%;
+}
+#mb .card__complete {
+  height: 25.159rem;
+}
+#mb .card__complete div {
+  flex: 0.5 1 auto;
+}
+
+#tb .card {
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+#tb .card__cards {
+  width: 490px;
+  height: 300px;
+  position: relative;
+  align-self: var(--cn);
+}
+#tb .card__front, #tb .card__back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+#tb .card__front {
+  transform: translate(0, 20%);
+  z-index: 2;
+}
+#tb .card__back {
+  transform: translate(25%, -15%);
+}
+#tb .card__form {
+  align-self: var(--cn);
+  width: 50%;
+  height: 500px;
+}
+#tb .card__form form {
+  height: 80%;
+}
+#tb .card__complete {
+  height: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */
