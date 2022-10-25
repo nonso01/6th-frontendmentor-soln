@@ -148,7 +148,7 @@ html body {
   z-index: 2;
 }
 #mb .card__front h1 {
-  font-size: 1.3rem;
+  font-size: 1.12rem;
 }
 #mb .card__front img {
   width: 4.104rem;
@@ -200,10 +200,10 @@ html body {
   height: 500px;
 }
 #tb .card__form form {
-  height: 80%;
+  height: 75%;
 }
 #tb .card__complete {
-  height: 80%;
+  height: 75%;
 }
 
 /*# sourceMappingURL=main.css.map */

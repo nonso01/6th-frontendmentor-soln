@@ -109,6 +109,10 @@ h1 {
   color: var(--l-g-v);
 }
 
+#tb h1 {
+  font-size: 2rem;
+}
+
 h2 {
   font-size: 2rem;
 }
@@ -120,7 +124,7 @@ span {
 
 @media (max-width: 1000px) {
   html {
-    width: var(--st-w) !important;
+    width: var(--st-w)
   }
 }
 @keyframes shake {

@@ -14,7 +14,7 @@ $im: !important;
  --bd: 1px solid currentColor;
  --ftf: "Space Grotesk",sans-serif;
  --bezier: cubic-bezier(0.5,0.2,0,0.8);
- --trans: all 0.2s  cubic-bezier(0.5,0.2,0,0.8);
+ --trans: all 0.15s  cubic-bezier(0.5,0.2,0,0.8);
  
  --active-col:  linear-gradient(46deg,hsla(249,99%,64%,1),hsla(278,94%,30%,1));
  --error-col: hsla(0,100%,66%,1);
@@ -46,7 +46,7 @@ $im: !important;
 // utilities
 .trans{
  transition: var(--trans);
- &:hover,&:active,&:valid,&:invalid{
+ &:hover,&:active,&:focus,&:valid,&:invalid{
   @extend .trans
  }
 }
@@ -119,6 +119,9 @@ label > span{
 h1{
  font-size: 2.2rem;
 color: var(--l-g-v);
+}
+#tb h1{
+ font-size: 2rem;
 }
 
 h2{
