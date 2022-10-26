@@ -163,6 +163,8 @@ a {
 
 .load {
   background: var(--v-d-v) url("/images/card-logo.svg") no-repeat border-box 50%/30% 10% !important;
+   min-height: var(--st-h) !important;
+
 }
 
 .hide-load {
@@ -171,7 +173,7 @@ a {
 
 @media (max-width: 1000px) {
   html {
-    width: var(--st-w) !important;
+    width: var(--st-w);
   }
 }
 @keyframes shake {

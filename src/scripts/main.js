@@ -36,7 +36,7 @@ function opacity(a,b,i){
 function normalize(){
  
  dqA("input").forEach(e=>{
- e.required=true
+ e.required= true
  e.classList.add("trans")
  })
  
@@ -44,7 +44,6 @@ function normalize(){
     e.classList.add("trans")
   e.classList.add("l-opacity")
  })
- event(dq("form"),"submit",(e)=>e.preventDefault())
  body.classList.add("trans")
 }
 
@@ -67,15 +66,26 @@ const Errors= [
  "names shouldn't exceed 22 char",
  "only valid ASCII word char",
  "Too many char",
- "input field can't be empty",
+ "Insufficient...",
  "Valid month/year 🙂"
  ]
 
 /* under development*/
 
-function writeOnCard(){
+
+
+const form= dq("form")
+ const complete= dq(".card__complete")
+ const formBtn= dq("form .btn")
+ const completeBtn= dq(".card__complete .btn")
  
- const allInput= dqA("input").forEach((e,i)=>{
+  const allInput= dqA("input")
+
+async function writeOnCard(){
+ 
+ const allInput= dqA("input")
+ 
+ allInput.forEach((e,i)=>{
   
   event(e,"input",()=>{ 
  
@@ -178,7 +188,6 @@ function writeOnCard(){
 
   })
   
-  
   event(e,"focus",()=>{  //focus
    switch(i){
     case 0:
@@ -217,27 +226,23 @@ function writeOnCard(){
  })
  
  
- const form= dq("form")
- const complete= dq(".card__complete")
- const formBtn= dq("form .btn")
- const completeBtn= dq(".card__complete .btn")
- 
- formBtn.onclick= ()=>{
- 
-  form.classList.toggle("hide")
+ form.onsubmit= (i)=>{
+   form.classList.toggle("hide")
   complete.classList.toggle("hide")
- }
+  i.preventDefault()
+  }
+  
  completeBtn.onclick=()=>{
-   
     complete.classList.toggle("hide")
     form.classList.toggle("hide")
  }
+ 
 }
 
 function others(){
- let m= dq(".attr")
- event(m,"click",()=>{
-  m.classList.toggle("show")
+ let attr= dq(".attr")
+ event(attr,"click",()=>{
+  attr.classList.toggle("show")
  })
 }
 
@@ -245,7 +250,6 @@ function others(){
 
 event(window,"load",()=>{
  normalize()
- 
  writeOnCard()
 others()
 
