@@ -13,8 +13,8 @@ $im: !important;
  --ts: transparent;
  --bd: 1px solid currentColor;
  --ftf: "Space Grotesk",sans-serif;
- --bezier: cubic-bezier(0.5,0.2,0,0.8);
- --trans: all 0.15s  cubic-bezier(0.5,0.2,0,0.8);
+ --bezier: ease;
+ --trans: all 0.15s ease;
  
  --active-col:  linear-gradient(46deg,hsla(249,99%,64%,1),hsla(278,94%,30%,1));
  --error-col: hsla(0,100%,66%,1);
@@ -118,12 +118,16 @@ label > span{
 
 h1{
  font-size: 2.2rem;
+ letter-spacing: 3px;
 color: var(--l-g-v);
 }
 #tb h1{
- font-size: 2rem;
+ font-size: 1.9rem;
+  letter-spacing: 1.5px;
 }
-
+#mb h1{
+ letter-spacing: 1px;
+}
 h2{
  font-size: 2rem;
 }
@@ -132,7 +136,48 @@ span{
  color: var(--l-g-v);
  font-size: 1.1rem;
 }
+a{
+ color: inherit;
+}
 
+.attr{
+ width: 3.145rem;
+ height: 3.145rem;
+ background: var(--ts) url("/images/favicon-32x32.png") no-repeat padding-box var(--cn)/cover;
+ border-radius: var(--st-w);
+ border: 3px solid var(--v-d-v);
+ position: fixed;
+ top: 80%;
+ left: 70%;
+ 
+ p{
+  background-image: var(--active-col);
+  width: 15.724rem;
+  height: 8.18rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  border-radius: var(--rad);
+  transform: scale(0) translate(-50%,-50%); // <===
+  color: var(--l-g-v);
+ }
+ &.show{
+  border-color: var(--error-col);
+  p{
+     transform: scale(1) translate(-50%,-50%);
+  }
+ }
+}
+
+//=============>>
+.load{
+ background: var(--v-d-v) url("/images/card-logo.svg") no-repeat border-box 50%/30% 10% $im;
+}
+.hide-load{
+ opacity: 0;
+}
+//<<=======≠=≠=====
 
 @media (max-width: 1000px){
  html{

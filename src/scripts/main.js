@@ -44,6 +44,8 @@ function normalize(){
     e.classList.add("trans")
   e.classList.add("l-opacity")
  })
+ event(dq("form"),"submit",(e)=>e.preventDefault())
+ body.classList.add("trans")
 }
 
 const Card= {
@@ -76,7 +78,6 @@ function writeOnCard(){
  const allInput= dqA("input").forEach((e,i)=>{
   
   event(e,"input",()=>{ 
-   // any changes
  
    switch(i){
     case 0:
@@ -176,7 +177,6 @@ function writeOnCard(){
     })
 
   })
-  // end input event
   
   
   event(e,"focus",()=>{  //focus
@@ -189,11 +189,14 @@ function writeOnCard(){
    break
    
    case 2:
+    Card.mm.parentNode.classList.add("layer")
     break
    
   case 3:
+       Card.yy.parentNode.classList.add("layer")
      break;
    case 4:
+    dq(".card__cards").classList.add("show")
       break
    default:
    csl("error")
@@ -205,17 +208,49 @@ function writeOnCard(){
   event(e,"blur",()=>{ // out of focus
    for(let prop in Card){
     Card[prop].classList.remove("layer")
-   // csl("out of focus")
+    Card[prop].parentNode.classList.remove("layer")
+   }
+   if(i===4){
+        dq(".card__cards").classList.remove("show")
    }
   })
  })
  
+ 
+ const form= dq("form")
+ const complete= dq(".card__complete")
+ const formBtn= dq("form .btn")
+ const completeBtn= dq(".card__complete .btn")
+ 
+ formBtn.onclick= ()=>{
+ 
+  form.classList.toggle("hide")
+  complete.classList.toggle("hide")
+ }
+ completeBtn.onclick=()=>{
+   
+    complete.classList.toggle("hide")
+    form.classList.toggle("hide")
+ }
 }
+
+function others(){
+ let m= dq(".attr")
+ event(m,"click",()=>{
+  m.classList.toggle("show")
+ })
+}
+
 
 
 event(window,"load",()=>{
  normalize()
  
  writeOnCard()
+others()
 
+timeOut(()=>{
+ html.classList.remove("load")
+ body.classList.remove("hide-load")
+},3000)
 })

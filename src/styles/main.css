@@ -171,6 +171,14 @@ html body {
 #mb .card__complete div {
   flex: 0.5 1 auto;
 }
+#mb .card__cards.show .card__front {
+  z-index: 0;
+  transform: translate(10%, -40%);
+}
+#mb .card__cards.show .card__back {
+  z-index: 2;
+  transform: translate(2%, 20%);
+}
 
 #tb .card {
   flex-flow: column;
@@ -204,6 +212,14 @@ html body {
 }
 #tb .card__complete {
   height: 75%;
+}
+#tb .card__cards.show .card__front {
+  z-index: 0;
+  transform: translate(25%, -15%);
+}
+#tb .card__cards.show .card__back {
+  z-index: 2;
+  transform: translate(0%, 20%);
 }
 
 /*# sourceMappingURL=main.css.map */

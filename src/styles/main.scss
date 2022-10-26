@@ -186,6 +186,18 @@ span{
  }
  height: 25.159rem;
 }
+//=====>>>
+&__cards.show{
+ .card__front{ 
+  z-index: 0;
+       transform: translate(10%,-40%);
+ }
+ .card__back{
+  z-index: 2;
+      transform: translate(2%,20%);
+ }
+}
+//<<=====
  }
 }
 
@@ -224,6 +236,19 @@ span{
   &__complete{
    height: 75%;
   }
+  //======>>
+  &__cards.show {
+   .card__front {
+    z-index: 0;
+    transform: translate(25%, -15%);
+   }
+  
+   .card__back {
+    z-index: 2;
+    transform: translate(0%, 20%);
+   }
+  }
+  //<<=====
  }
 }
  // *{border: var(--bd);}
