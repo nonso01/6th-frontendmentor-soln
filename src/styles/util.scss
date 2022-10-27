@@ -175,9 +175,7 @@ a{
   position: center;
  }
  transition: var(--trans);
- //min-height: var(--st-h);
- 
- animation: col .5s var(--bezier) infinite;
+ animation: col .9s var(--bezier) infinite;
 }
 .hide-load{
  display: none;
@@ -208,13 +206,13 @@ a{
 
 @keyframes col{
  0%,10%{
-   background-image: radial-gradient(250px at 50% 50%,var(--v-d-v) 10% ,var(--ts) 20% 30%,var(--v-d-v) 40% 45%,var(--ts)  50%);
+   background-image: radial-gradient(250px at 50% 50%,var(--v-d-v) 20% ,var(--ts) 20% 40%,var(--v-d-v) 40% 45%,var(--ts)  50%);
  }
  20%,40%{
-     background-image: radial-gradient(150px at 50% 50%,var(--v-d-v) 10% ,var(--ts) 20% 30%,var(--v-d-v) 40% 45%,var(--ts)  50%);
+     background-image: radial-gradient(150px at 50% 50%,var(--v-d-v) 20% ,var(--ts) 20% 40%,var(--v-d-v) 40% 45%,var(--ts)  50%);
 
  }
  60%,90%{
-     background-image: radial-gradient(50px at 50% 50%,var(--error-col) 10% ,var(--ts) 20% 30%,var(--error-col) 40% 45%,var(--ts)  50%);
+     background-image: radial-gradient(50px at 50% 50%,var(--v-d-v) 20% ,var(--ts) 20% 40%,var(--v-d-v) 40% 45%,var(--ts)  50%);
  }
 }
