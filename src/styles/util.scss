@@ -16,7 +16,7 @@ $im: !important;
  --bezier: ease;
  --trans: all 0.15s ease;
  
- --active-col:  linear-gradient(46deg,hsla(249,99%,64%,1),hsla(278,94%,30%,1));
+ --active-col: hsla(249,99%,64%,1) ;
  --error-col: hsla(0,100%,66%,1);
  --wt: #fff;
  --l-g-v: hsla(270,3%,87%,1);
@@ -67,13 +67,8 @@ $im: !important;
 }
 
 // elements states
-.valid:hover{
- border-image:{
-   source: var(--active-col);
-   slice: 1;
-   repeat: stretch;
-  }
-    border-color: var(--ts);
+.valid{
+ border-color: var(--active-col);
 }
 .invalid{
  border-color: var(--error-col);
@@ -95,6 +90,7 @@ $im: !important;
 .layer{
  border-radius: calc(var(--rad)/2);
  background-color: hsla(0,0%,100%,0.2);
+ border: 2px solid;
 // transition: var(--trans);
 }
 
@@ -146,40 +142,32 @@ a{
  left: 70%;
  
  p{
-  background-image: var(--active-col);
+  background-image: linear-gradient(45deg, var(--v-d-v),var(--active-col));
   width: 15.724rem;
-  height: 8.18rem;
+  height: 15.724rem;
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 4;
-  border-radius: var(--rad);
-  transform: scale(0) translate(-50%,-50%); // <===
+  z-index: 9;
+  border-radius: var(--st-w);
+  border: 3px solid;
+  transform: scale(0) translate3d(-50%,-100%,0);//<<===
   color: var(--l-g-v);
  }
  &.show{
-  border-color: var(--error-col);
+  border-color: var(--active-col);
   p{
-     transform: scale(1) translate(-50%,-50%);
+    transform: scale(1) translate3d(-50%,-50%,0);
+  box-shadow: 0 var(--fts) var(--fts) var(--rad) rgba($color: #000000, $alpha: 0.1);
   }
  }
 }
 
 //=============>>
-.load{
- --col-1: hsla(259,99%,64%,0.5);
- --col-2: hsla(278,94%,30%,0.5);
- background: {
-  image: radial-gradient(350px at 50% 50%,var(--v-d-v) 10% ,var(--ts) 20% 30%,var(--v-d-v) 40% 45%,var(--ts)  50%);
-  size: 100% 100% $im;
-  position: center;
- }
- transition: var(--trans);
- animation: col .9s var(--bezier) infinite;
+/*.load{
+
 }
-.hide-load{
- display: none;
-}
+*/
 //<<=======≠=≠=====
 
 @media (max-width: 1000px){
@@ -204,15 +192,3 @@ a{
  }
 }
 
-@keyframes col{
- 0%,10%{
-   background-image: radial-gradient(250px at 50% 50%,var(--v-d-v) 20% ,var(--ts) 20% 40%,var(--v-d-v) 40% 45%,var(--ts)  50%);
- }
- 20%,40%{
-     background-image: radial-gradient(150px at 50% 50%,var(--v-d-v) 20% ,var(--ts) 20% 40%,var(--v-d-v) 40% 45%,var(--ts)  50%);
-
- }
- 60%,90%{
-     background-image: radial-gradient(50px at 50% 50%,var(--v-d-v) 20% ,var(--ts) 20% 40%,var(--v-d-v) 40% 45%,var(--ts)  50%);
- }
-}

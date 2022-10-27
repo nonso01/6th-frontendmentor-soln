@@ -63,12 +63,12 @@ const Card= {
 }
 
 const Errors= [
- "should not be more than 16 char",
- "names shouldn't exceed 22 char",
- "only valid ASCII word char",
- "Too many char",
- "Insufficient...",
- "Valid month/year :^)"
+ "should not be more than 16 char",//0
+ "names shouldn't exceed 22 char",//1
+ "only valid ASCII word char",//2
+ "Too many char",//3
+ "Insufficient.:-| or empty input",//4
+ "Valid month/year :^)"//5
  ]
 
 /* under development*/
@@ -119,7 +119,7 @@ async function writeOnCard(){
     } 
     
    if(e.value.length===0){
-     let t = "12** **** **** **16"
+     let t = "12## #### #### ##16"
       Card.num.textContent=t
     }
     break
@@ -211,18 +211,42 @@ async function writeOnCard(){
   
   })
   
-  event(e,"blur",()=>{ // out of focus
+  event(e,"blur",()=>{ 
    for(let prop in Card){
     Card[prop].classList.remove("layer")
     Card[prop].parentNode.classList.remove("layer")
    }
-   if(i===4){
-        dq(".card__cards").classList.remove("show")
+   switch(i){
+    case 0:
+   e.value.length<6?opacity(e,Card.name__error,4):e.classList.add("valid")
+     break
+     
+    case 1:
+    e.value.length<e.maxLength?opacity(e,Card.num__error,4):e.classList.add("valid")
+     break
+     
+     case 2:
+  !e.value?opacity(e,Card.mm__error,4):e.classList.add("valid")
+      break
+      
+   case 3:
+  e.value.length<2?opacity(e,Card.mm__error,4):e.classList.add("valid")
+    break
+    
+    case 4:
+   dq(".card__cards").classList.remove("show")
+   e.value.length<3?opacity(e,Card.cvc__error,4):e.classList.add("valid")
+     break
+   
+     default:
+     console.error("err")
+     break
    }
+   
   })
- })
- 
- 
+     
+    })
+    
  form.onsubmit= (i)=>{
    form.classList.toggle("hide")
   complete.classList.toggle("hide")
@@ -232,6 +256,18 @@ async function writeOnCard(){
  completeBtn.onclick=()=>{
     complete.classList.toggle("hide")
     form.classList.toggle("hide")
+    
+   let yesNo= prompt("Was this fun ? (yes || no)",'')
+   switch(yesNo){
+    case "yes":
+     alert("thanks dude")
+  timeOut(()=>location.reload(),1000)
+     break
+     case "no":
+   alert("ooo! will do well next time")
+   location.reload()
+      break
+   }
  }
  
 }
@@ -252,6 +288,6 @@ others()
 
 timeOut(()=>{
  html.classList.remove("load")
- body.classList.remove("hide-load")
+ body.classList.remove("hide")
 },4000)
 })
