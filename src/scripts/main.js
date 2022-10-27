@@ -25,6 +25,7 @@ function rmEvent(e,t,f){
 }
 
 function opacity(a,b,i){
+ // a=input, b=err </e>, i=index
  a.classList.add("invalid")
  a.value=""
   b.classList.contains("l-opacity")?b.classList.remove("l-opacity"):0
@@ -67,12 +68,10 @@ const Errors= [
  "only valid ASCII word char",
  "Too many char",
  "Insufficient...",
- "Valid month/year 🙂"
+ "Valid month/year :^)"
  ]
 
 /* under development*/
-
-
 
 const form= dq("form")
  const complete= dq(".card__complete")
@@ -82,8 +81,6 @@ const form= dq("form")
   const allInput= dqA("input")
 
 async function writeOnCard(){
- 
- const allInput= dqA("input")
  
  allInput.forEach((e,i)=>{
   
@@ -256,5 +253,5 @@ others()
 timeOut(()=>{
  html.classList.remove("load")
  body.classList.remove("hide-load")
-},3000)
+},4000)
 })

@@ -1,7 +1,6 @@
 @import url("/src/styles/util.css");
 
 $im: !important;
-// @import fonts
 * {
  margin: 0;
  padding: 0;
@@ -15,8 +14,8 @@ $im: !important;
 }
 
 html{
- width: var(--mx-w);
- min-height: 113.215rem;
+ width: var(--st-w);
+ min-height:  var(--st-h);
  font-size: var(--fts);
  background: var(--wt) url("/images/bg-main-desktop.png") no-repeat border-box top left/35% 100%;
  body{
@@ -143,20 +142,20 @@ span{
   min-height: var(--st-h);
   &__cards{
    width: 100%;
-   height: 400px;
+   height: 25.16rem;
      position: relative;
   }
   &__front,&__back{
     position: absolute;
    width: 90%;
-   height: 190px;
+   height: 11.95rem;
    border-radius: var(--rad);
     span{
       font-size: .7rem;
     }
    }
    &__front{
-    transform: translate(2%,20%);
+    transform: translate3d(2%,20%,0);
     z-index: 2;
     h1{
      font-size: 1.12rem;
@@ -168,7 +167,7 @@ span{
 
    }
    &__back{
-    transform: translate(10%,-40%);
+    transform: translate3d(10%,-40%,0);
    }
 
 
@@ -190,11 +189,11 @@ span{
 &__cards.show{
  .card__front{ 
   z-index: 0;
-       transform: translate(10%,-40%);
+       transform: translate3d(10%,-40%,0);
  }
  .card__back{
   z-index: 2;
-      transform: translate(2%,20%);
+      transform: translate3d(2%,20%,0);
  }
 }
 //<<=====
@@ -206,8 +205,8 @@ span{
   flex-flow: column;
   justify-content: space-evenly;
   &__cards{
-   width: 490px;
-   height: 300px;
+   width: 30.8195rem;
+   height: 18.869rem;
    position: relative;
    
   align-self: var(--cn);
@@ -218,17 +217,17 @@ span{
    width: 100%;
   }
   &__front{
-   transform: translate(0,20%);
+   transform: translate3d(0,20%,0);
    z-index: 2;
   }
   &__back{
-   transform: translate(25%,-15%);
+   transform: translate3d(25%,-15%,0);
   }
   
   &__form{
    align-self: var(--cn);
    width: 50%;
-   height: 500px;
+   height: 31.448rem;
    form{
     height: 75%;
    }
@@ -240,12 +239,12 @@ span{
   &__cards.show {
    .card__front {
     z-index: 0;
-    transform: translate(25%, -15%);
+    transform: translate3d(25%, -15%,0);
    }
   
    .card__back {
     z-index: 2;
-    transform: translate(0%, 20%);
+    transform: translate3d(0%, 20%,0);
    }
   }
   //<<=====

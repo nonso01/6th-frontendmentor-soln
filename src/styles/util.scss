@@ -77,12 +77,7 @@ $im: !important;
 }
 .invalid{
  border-color: var(--error-col);
- animation:{
-  name: shake;
-  duration: .3s;
-  iteration-count: 3;
-  timing-function: var(--bezier);
- }
+ animation: shake .2s var(--bezier) 3;
 }
 
 .error{
@@ -172,17 +167,26 @@ a{
 
 //=============>>
 .load{
- background: var(--v-d-v) url("/images/card-logo.svg") no-repeat border-box 50%/30% 10% $im;
- min-height: var(--st-h);
+ --col-1: hsla(259,99%,64%,0.5);
+ --col-2: hsla(278,94%,30%,0.5);
+ background: {
+  image: radial-gradient(350px at 50% 50%,var(--v-d-v) 10% ,var(--ts) 20% 30%,var(--v-d-v) 40% 45%,var(--ts)  50%);
+  size: 100% 100% $im;
+  position: center;
+ }
+ transition: var(--trans);
+ //min-height: var(--st-h);
+ 
+ animation: col .5s var(--bezier) infinite;
 }
 .hide-load{
- opacity: 0;
+ display: none;
 }
 //<<=======≠=≠=====
 
 @media (max-width: 1000px){
  html{
-  width: var(--st-w) !important;
+  width: var(--st-w);
  }
 }
 
@@ -199,5 +203,18 @@ a{
  }
  100%{
   transform: none;
+ }
+}
+
+@keyframes col{
+ 0%,10%{
+   background-image: radial-gradient(250px at 50% 50%,var(--v-d-v) 10% ,var(--ts) 20% 30%,var(--v-d-v) 40% 45%,var(--ts)  50%);
+ }
+ 20%,40%{
+     background-image: radial-gradient(150px at 50% 50%,var(--v-d-v) 10% ,var(--ts) 20% 30%,var(--v-d-v) 40% 45%,var(--ts)  50%);
+
+ }
+ 60%,90%{
+     background-image: radial-gradient(50px at 50% 50%,var(--error-col) 10% ,var(--ts) 20% 30%,var(--error-col) 40% 45%,var(--ts)  50%);
  }
 }

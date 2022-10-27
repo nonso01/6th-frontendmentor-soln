@@ -11,7 +11,7 @@
 
 html {
   width: var(--st-w);
-  min-height: 113.215rem;
+  min-height: var(--st-h);
   font-size: var(--fts);
   background: var(--wt) url("/images/bg-main-desktop.png") no-repeat border-box top left/35% 100%;
 }
@@ -131,20 +131,20 @@ html body {
 }
 #mb .card__cards {
   width: 100%;
-  height: 400px;
+  height: 25.16rem;
   position: relative;
 }
 #mb .card__front, #mb .card__back {
   position: absolute;
   width: 90%;
-  height: 190px;
+  height: 11.95rem;
   border-radius: var(--rad);
 }
 #mb .card__front span, #mb .card__back span {
   font-size: 0.7rem;
 }
 #mb .card__front {
-  transform: translate(2%, 20%);
+  transform: translate3d(2%, 20%, 0);
   z-index: 2;
 }
 #mb .card__front h1 {
@@ -155,7 +155,7 @@ html body {
   height: 2.217rem;
 }
 #mb .card__back {
-  transform: translate(10%, -40%);
+  transform: translate3d(10%, -40%, 0);
 }
 #mb .card__form {
   width: 90%;
@@ -173,11 +173,11 @@ html body {
 }
 #mb .card__cards.show .card__front {
   z-index: 0;
-  transform: translate(10%, -40%);
+  transform: translate3d(10%, -40%, 0);
 }
 #mb .card__cards.show .card__back {
   z-index: 2;
-  transform: translate(2%, 20%);
+  transform: translate3d(2%, 20%, 0);
 }
 
 #tb .card {
@@ -185,8 +185,8 @@ html body {
   justify-content: space-evenly;
 }
 #tb .card__cards {
-  width: 490px;
-  height: 300px;
+  width: 30.8195rem;
+  height: 18.869rem;
   position: relative;
   align-self: var(--cn);
 }
@@ -196,16 +196,16 @@ html body {
   width: 100%;
 }
 #tb .card__front {
-  transform: translate(0, 20%);
+  transform: translate3d(0, 20%, 0);
   z-index: 2;
 }
 #tb .card__back {
-  transform: translate(25%, -15%);
+  transform: translate3d(25%, -15%, 0);
 }
 #tb .card__form {
   align-self: var(--cn);
   width: 50%;
-  height: 500px;
+  height: 31.448rem;
 }
 #tb .card__form form {
   height: 75%;
@@ -215,11 +215,11 @@ html body {
 }
 #tb .card__cards.show .card__front {
   z-index: 0;
-  transform: translate(25%, -15%);
+  transform: translate3d(25%, -15%, 0);
 }
 #tb .card__cards.show .card__back {
   z-index: 2;
-  transform: translate(0%, 20%);
+  transform: translate3d(0%, 20%, 0);
 }
 
 /*# sourceMappingURL=main.css.map */

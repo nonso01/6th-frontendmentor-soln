@@ -6,14 +6,13 @@ const mobile= aboveMobile/1.6
 addIdOnResize()
 
 function addIdOnResize(){
- const bodyWidth= window.innerWidth
+ let bodyWidth= window.innerWidth
  
  if(bodyWidth <= aboveMobile && bodyWidth > mobile) html.id="tb"
- 
  if(bodyWidth <= mobile) html.id="mb"
+ if(bodyWidth>aboveMobile) html.id=""
+ 
  csl(bodyWidth)
 }
 
-event(window,"resize",()=>{
- addIdOnResize()
-})
+event(window,"resize",addIdOnResize)
