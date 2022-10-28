@@ -10,7 +10,7 @@
 }
 
 html {
-  width: var(--mx-w);
+  width: var(--st-w);
   min-height: var(--st-h);
   font-size: var(--fts);
   background: var(--wt) url("/images/bg-main-desktop.png") no-repeat border-box top left/35% 100%;
