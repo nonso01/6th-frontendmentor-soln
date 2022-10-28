@@ -1,6 +1,7 @@
 @import url("/src/styles/main.css");
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
 
+
 $im: !important;
 :root {
  --fts: 15.899px;
@@ -9,6 +10,7 @@ $im: !important;
  --st-w: 100%;
  --st-h: 100vh;
  --mx-w: 1440px;
+ --mx-h: 69.1867rem;
  --cn: center;
  --ts: transparent;
  --bd: 1px solid currentColor;
@@ -164,10 +166,15 @@ a{
 }
 
 //=============>>
-/*.load{
-
+.load{
+background: {
+ image: conic-gradient(from -30rad at 50%,var(--v-d-v) 20%,var(--ts) 30% 50%,var(--v-d-v));
+ size: 100% 100% $im;
 }
-*/
+min-height: var(--st-h);
+animation: col 5s ease-in-out infinite;
+}
+
 //<<=======≠=≠=====
 
 @media (max-width: 1000px){
@@ -192,3 +199,10 @@ a{
  }
 }
 
+@keyframes col{
+ @for $i from 1 through 100{
+  #{$i}%{
+   background-image:conic-gradient(from $i +20rad at 50%,var(--v-d-v) $i +.2%,var(--ts) 30% $i +.5%,var(--v-d-v));
+  }
+ }
+}

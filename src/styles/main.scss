@@ -14,7 +14,7 @@ $im: !important;
 }
 
 html{
- width: var(--st-w);
+ width: var(--mx-w);
  min-height:  var(--st-h);
  font-size: var(--fts);
  background: var(--wt) url("/images/bg-main-desktop.png") no-repeat border-box top left/35% 100%;
@@ -25,7 +25,8 @@ html{
 
 
 .card{
- flex: 0.6 1 auto;
+ //flex: 0.6 1 auto;
+ min-height: var(--mx-h);
 &__cards{
  width: 40%;
  overflow: visible;
@@ -128,7 +129,7 @@ span{
  min-height: var(--st-h);
  background:{
   position: top left;
-  size: var(--st-w) calc(var(--st-w)/3.2);
+  size: var(--st-w) calc(var(--st-w)/3.3);
  }
  body{
   justify-content: flex-start;
@@ -203,7 +204,8 @@ span{
 #tb{
  .card{
   flex-flow: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  
   &__cards{
    width: 30.8195rem;
    height: 18.869rem;

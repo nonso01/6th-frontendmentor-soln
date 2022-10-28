@@ -67,7 +67,7 @@ const Errors= [
  "names shouldn't exceed 22 char",//1
  "only valid ASCII word char",//2
  "Too many char",//3
- "Insufficient.:-| or empty input",//4
+ "Insufficient or empty input",//4
  "Valid month/year :^)"//5
  ]
 
@@ -267,6 +267,9 @@ async function writeOnCard(){
    alert("ooo! will do well next time")
    location.reload()
       break
+  default: 
+    alert("Anyways ^_^")
+    break
    }
  }
  
@@ -276,6 +279,9 @@ function others(){
  let attr= dq(".attr")
  event(attr,"click",()=>{
   attr.classList.toggle("show")
+  form.classList.toggle("hide")
+  //====>> magic happens
+  complete.classList.contains("hide")?0:form.classList.add("hide")
  })
 }
 
