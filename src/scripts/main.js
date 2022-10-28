@@ -261,7 +261,7 @@ async function writeOnCard(){
    switch(yesNo){
     case "yes":
      alert("thanks dude")
-  timeOut(()=>location.reload(),1000)
+  location.replace("https://github.com/nonso01")
      break
      case "no":
    alert("ooo! will do well next time")

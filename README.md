@@ -12,7 +12,7 @@
 
 - so as to create more spaghetti 🍝 code 👍, nice for the brain.
 
-- not only that used sasScript so as to have some fun writing css.
+- not only that, i used sasScript so as to have some fun writing css.
 
 - created some utility classes and adopted the ways of some css library (trying to create one too).
 
