@@ -162,7 +162,7 @@ a {
 }
 
 .load {
-  background-image: conic-gradient(from -30rad at 50%, var(--v-d-v) 20%, var(--ts) 30% 50%, var(--v-d-v));
+ /* background-image: conic-gradient(from -30rad at 50%, var(--v-d-v) 20%, var(--ts) 30% 50%, var(--v-d-v));*/
   background-size: 100% 100% !important;
   min-height: var(--st-h);
   animation: col 3s ease-in-out infinite;
