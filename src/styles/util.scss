@@ -174,7 +174,7 @@ background: {
  size: 100% 100% $im;
 }
 min-height: var(--st-h);
-animation: col 5s ease-in-out infinite;
+animation: col 3s ease-in-out infinite;
 }
 
 //<<=======≠=≠=====
@@ -202,9 +202,10 @@ animation: col 5s ease-in-out infinite;
 }
 
 @keyframes col{
- @for $i from 1 through 100{
-  #{$i}%{
-   background-image:conic-gradient(from $i +20rad at 50%,var(--v-d-v) $i +.2%,var(--ts) 30% $i +.5%,var(--v-d-v));
-  }
+ from{
+   opacity: 0;
+ }
+ to{
+   opacity: 1;
  }
 }
